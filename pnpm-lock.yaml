@@ -14,7 +14,7 @@ specifiers:
   unplugin-icons: ^0.14.10
   unplugin-vue-components: ^0.22.7
   vite: ^3.1.2
-  vite-plugin-inspect: ^0.7.1
+  vite-plugin-inspect: ^0.7.2
   vue: ^3.2.39
   vue-tsc: ^0.40.13
 
@@ -35,7 +35,7 @@ devDependencies:
   unplugin-icons: 0.14.10_vite@3.1.2
   unplugin-vue-components: 0.22.7_vite@3.1.2+vue@3.2.39
   vite: 3.1.2
-  vite-plugin-inspect: 0.7.1_vite@3.1.2
+  vite-plugin-inspect: 0.7.2_vite@3.1.2
   vue-tsc: 0.40.13_typescript@4.8.3
 
 packages:
@@ -1707,8 +1707,8 @@ packages:
       webpack-virtual-modules: 0.4.5
     dev: true
 
-  /vite-plugin-inspect/0.7.1_vite@3.1.2:
-    resolution: {integrity: sha512-mkTw5itsI+89WNJ6og0BpEAaV4ticrOGaoj+oWDR61W72H2mfkuw3MaAdpnnq6s6A7tKfM4nPaMtxjlmw3uXYg==}
+  /vite-plugin-inspect/0.7.2_vite@3.1.2:
+    resolution: {integrity: sha512-d6lR45+bjojVvBTNvDKssSdvHs238RLVIQ3sErRR5H0ktSncLQnjsm9TBMnxUDTFoIl75MIZZHsYpnCkh2a2mg==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^3.1.0

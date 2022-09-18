@@ -78,7 +78,6 @@ export default defineConfig({
 
     UnoCSS(),
 
-    // temporarily disable due to issue https://github.com/antfu/vite-plugin-inspect/pull/39
-    // Inspect(),
+    Inspect(),
   ],
 })
