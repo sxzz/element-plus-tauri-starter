@@ -6,16 +6,33 @@ import IconsResolver from 'unplugin-icons/resolver'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import UnoCSS from 'unocss/vite'
 import Inspect from 'vite-plugin-inspect'
 
 const pathSrc = path.resolve(__dirname, 'src')
 
 export default defineConfig({
+  clearScreen: false,
+
   resolve: {
     alias: {
       '@': pathSrc,
     },
   },
+
+  server: {
+    port: 1420,
+    strictPort: true,
+  },
+
+  build: {
+    target: ['es2018', 'chrome64', 'firefox78', 'safari12'],
+    minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
+    sourcemap: !!process.env.TAURI_DEBUG,
+  },
+
+  envPrefix: ['VITE_', 'TAURI_'],
+
   plugins: [
     Vue({
       reactivityTransform: true,
@@ -59,6 +76,9 @@ export default defineConfig({
       autoInstall: true,
     }),
 
-    Inspect(),
+    UnoCSS(),
+
+    // temporarily disable due to issue https://github.com/antfu/vite-plugin-inspect/pull/39
+    // Inspect(),
   ],
 })

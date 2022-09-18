@@ -14,7 +14,12 @@ let tauriVersion = $ref('')
 </script>
 
 <template>
-  <h1 style="color: var(--el-color-primary)">
+  <h1
+    flex="~ gap-1"
+    justify-center
+    items-center
+    text="[var(--el-color-primary)]"
+  >
     <i-ep-element-plus /> Hello Element Plus!
   </h1>
 
